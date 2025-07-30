@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #6e6252;
+  color: #000000;
+  margin: 0; /* Ensure no default margin */
+  padding: 0; /* Ensure no default padding */
+  background-image: url('background-image.jpg'); /* Add this line */
+  background-size: cover; /* Optional, but recommended to scale the image */
+  background-position: center; /* Optional, but recommended to center the image */
+  background-blend-mode:multiply; 
+}
+.form-control-dark:focus {
+  background-color: #555;
+  border-color: #888;
+  outline: none;
+  color: #fff;
+}
+
+.form-control-dark::placeholder {
+  background-color: #444;
+  border: 1px solid #7c7777;
+  color: #ddd;
+  border-radius: 20px; /* Increase the border radius to make it rounded */
+  padding: 15px; /* Increase the padding */
+  transition: background-color 0.3s, border-color 0.3s;
+  height: 60px; /* Increase the height */
+}
+
+
+.btn-danger {
+  background-color: #e74c3c;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.text-info {
+  color: #1e90ff;
+}
+
+.text-center {
+  text-align: center;
+  color: wheat;
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.btn-lg {
+  font-size: 1.25rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-col {
+  flex: 1 1 calc(33% - 20px);
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin: 0 10px;
+  color: wheat;
+  margin: 30px; /* Add margin to create gap between columns */
+  max-width: 2500px;
+  font-size: 30px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.form-col input {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  max-width: 800px;
+  min-height: 30px;
+}
+
+.text-center .btn {
+  margin-top: 20px;
+}
+
+/* Add animation to button */
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
